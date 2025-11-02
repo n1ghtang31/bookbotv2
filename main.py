@@ -10,7 +10,4 @@ def main(path):
 
 book = "books/frankenstein.txt"
 # main(book)
-text = get_book_text(book)
 
-split = split_char(text)
-print(count_characters(text))
