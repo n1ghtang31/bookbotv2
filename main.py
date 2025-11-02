@@ -1,4 +1,4 @@
-from stats import split_text, count_characters, split_char
+from stats import split_text, count_characters, split_char, generate_report
 
 def get_book_text(path):
     with open(path) as book:
@@ -6,8 +6,10 @@ def get_book_text(path):
     return text
 
 def main(path):
-    print(get_book_text(path))
-
+    text = get_book_text(path)
+    count = count_characters(text)
+    print(generate_report(text, path))
+    
 book = "books/frankenstein.txt"
-# main(book)
-
+text = get_book_text(book)
+main(book)
